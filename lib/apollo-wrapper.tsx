@@ -8,10 +8,11 @@ import {
   NextSSRInMemoryCache,
   SSRMultipartLink,
 } from '@apollo/experimental-nextjs-app-support/ssr';
+import { BASE_URL } from './constants';
 
 function makeClient() {
   const httpLink = new HttpLink({
-    uri: 'http://localhost:8080/graphiql',
+    uri: `${BASE_URL}graphiql`,
     credentials: 'same-origin',
     fetchOptions: { cache: 'no-store' },
   });

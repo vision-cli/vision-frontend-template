@@ -1,8 +1,9 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
+import { BASE_URL } from './lib/constants';
 
 const config: CodegenConfig = {
   overwrite: true,
-  schema: 'http://localhost:8080/api/graphql',
+  schema: `${BASE_URL}api/graphql`,
   documents: ['./graphql/queries/*.graphql', './graphql/mutations/*.graphql'],
   config: {
     nonOptionalTypename: true,
