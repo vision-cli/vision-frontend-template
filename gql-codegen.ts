@@ -2,13 +2,7 @@ import { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
   overwrite: true,
-  schema: [
-    {
-      './graphql/server/schemas/*.ts': {
-        skipGraphQLImport: true,
-      },
-    },
-  ],
+  schema: 'http://localhost:8080/api/graphql',
   documents: ['./graphql/queries/*.graphql', './graphql/mutations/*.graphql'],
   config: {
     nonOptionalTypename: true,
@@ -30,6 +24,7 @@ const config: CodegenConfig = {
         'typescript-operations',
         'typescript-react-apollo',
       ],
+      preset: 'client',
     },
   },
 };
