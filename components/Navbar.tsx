@@ -12,7 +12,7 @@ export default function Navbar() {
                 className="flex-image p-2"
                 src={Logo}
                 alt="Vision Logo"
-                width="75"
+                width="70"
             />
         </nav>
     )
